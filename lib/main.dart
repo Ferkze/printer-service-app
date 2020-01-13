@@ -14,13 +14,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage2(),
+      home: const HomePage(),
     );
   }
 }
 
-class MyHomePage2 extends StatelessWidget {
-  const MyHomePage2();
+class HomePage extends StatelessWidget {
+  const HomePage();
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class MyHomePage2 extends StatelessWidget {
           children: <Widget>[
             Text('Pushed this many times:'),
             Observer(
-              builder: (_) => Text('${store.ledger.first.amount}',
+              builder: (_) => Text('${store.ledger.first.length}',
                   style: Theme.of(context).textTheme.display1),
             )
           ],
@@ -43,7 +43,7 @@ class MyHomePage2 extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         tooltip: 'Increment',
-        onPressed: () => store.ledger.first.setAmount(100),
+        onPressed: () => null,
       ),
     );
   }
